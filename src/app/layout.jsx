@@ -24,6 +24,7 @@ export default function RootLayout({ children }) {
       >
         <header>
           <h1>dev-story</h1>
+          <button className='btn btn-primary'>btn</button>
         </header>
         {children}
       </body>
