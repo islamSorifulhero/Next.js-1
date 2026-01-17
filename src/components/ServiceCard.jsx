@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function ServiceCard({ service }) {
   return (
-    <div className="border rounded-lg shadow p-4">
+    <div className="rounded-lg shadow p-4">
       <img
         src={service.image}
         alt={service.title}

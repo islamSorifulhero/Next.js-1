@@ -25,7 +25,7 @@ export default function Navbar() {
   };
 
   return (
-    <nav className="flex items-center justify-between px-6 py-4 shadow bg-white">
+    <nav className="flex items-center justify-between px-6 py-4 shadow bg-whit bg-base-300">
       <Link href="/" className="font-bold text-xl">
         Care.xyz
       </Link>
