@@ -1,19 +1,21 @@
-import { connectDB } from "@/lib/db";
-import { Booking } from "@/models/Booking";
-
-connectDB();
+import { dbConnect, collections } from "../../../lib/dbConnect";
 
 export default async function handler(req, res) {
   if (req.method === "POST") {
     try {
-      const booking = new Booking(req.body);
-      await booking.save();
+      const bookingCollection = await dbConnect(collections.BOOKINGS);
 
-      // TODO: Send email invoice (optional)
+      const result = await bookingCollection.insertOne({
+        ...req.body,
+        createdAt: new Date(),
+      });
 
-      res.status(201).json({ message: "Booking created successfully" });
-    } catch (err) {
-      console.log(err);
+      res.status(201).json({
+        message: "Booking created",
+        insertedId: result.insertedId,
+      });
+    } catch (error) {
+      console.error(error);
       res.status(500).json({ message: "Booking failed" });
     }
   } else {

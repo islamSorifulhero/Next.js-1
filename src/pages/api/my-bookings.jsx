@@ -1,26 +1,20 @@
-import { connectDB } from "@/lib/db";
-import { Booking } from "@/models/Booking";
-
-connectDB();
+import { dbConnect, collections } from "../../../lib/dbConnect";
 
 export default async function handler(req, res) {
   if (req.method === "GET") {
     try {
-      // For demo, using token as email
-      const token = req.cookies.token || "unknown@example.com";
-      const bookings = await Booking.find({ userEmail: token });
+      const bookingCollection = await dbConnect(collections.BOOKINGS);
 
-      // Populate service title from dummy services
-      const services = require("@/utils/services").services;
+      const userEmail =
+        req.cookies?.userEmail || "unknown@example.com";
 
-      const data = bookings.map((b) => {
-        const service = services.find((s) => s._id === b.serviceId);
-        return { ...b._doc, serviceTitle: service ? service.title : "" };
-      });
+      const bookings = await bookingCollection
+        .find({ userEmail })
+        .toArray();
 
-      res.status(200).json(data);
-    } catch (err) {
-      console.log(err);
+      res.status(200).json(bookings);
+    } catch (error) {
+      console.error(error);
       res.status(500).json({ message: "Failed to fetch bookings" });
     }
   } else {
