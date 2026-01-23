@@ -20,7 +20,7 @@ export default function HomePage() {
       </section>
 
       {/* About */}
-      <section className="max-w-6xl bg-base-200 mx-auto py-12 px-4">
+      <section className="bg-base-200 text-center py-12">
         <h2 className="text-2xl font-bold mb-3">About Care.xyz</h2>
         <p className="text-gray-600">
           Care.xyz helps families find trusted and verified caretakers
@@ -29,7 +29,7 @@ export default function HomePage() {
       </section>
 
       {/* Services */}
-      <section className="max-w-6xl bg-base-200 mx-auto py-12 px-4">
+      <section className="bg-base-200 py-12 px-10">
         <h2 className="text-2xl font-bold mb-6">Our Services</h2>
 
         <div className="grid md:grid-cols-3 gap-6">
