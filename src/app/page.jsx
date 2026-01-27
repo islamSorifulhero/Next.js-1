@@ -10,7 +10,6 @@ export const metadata = {
 export default function HomePage() {
   return (
     <div>
-      {/* Banner */}
       <section className="bg-base-200 text-center py-10">
         <h1 className="text-4xl font-bold">
           Trusted Care for Your Loved Ones
@@ -24,7 +23,6 @@ export default function HomePage() {
       <section className="bg-base-200">
         <div className="container mx-auto px-6">
           <div className="rounded-2xl bg-primary text-primary-content p-10 md:p-16 flex flex-col md:flex-row items-center justify-between gap-8">
-            {/* Text Content */}
             <div>
               <h2 className="text-3xl md:text-4xl font-bold">
                 Ready to Upgrade Your Style?
@@ -36,7 +34,6 @@ export default function HomePage() {
               </p>
             </div>
 
-            {/* Action Buttons */}
             <div className="flex flex-col sm:flex-row gap-4">
               <Link
                 href="#"
