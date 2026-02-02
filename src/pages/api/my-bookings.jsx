@@ -1,4 +1,4 @@
-import { dbConnect, collections } from "../../../lib/dbConnect";
+import { dbConnect, collections } from "../../lib/dbConnect";
 
 export default async function handler(req, res) {
   if (req.method === "GET") {

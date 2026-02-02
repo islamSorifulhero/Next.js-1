@@ -63,14 +63,6 @@ export default function HomePage() {
           ))}
         </div>
       </section>
-
-      {/* Testimonials */}
-      <section className="bg-base-200 py-12 text-center">
-        <h2 className="text-2xl font-bold">Why Choose Us?</h2>
-        <p className="mt-3 text-gray-600">
-          1000+ Happy Families | Trusted Caretakers | Secure Booking
-        </p>
-      </section>
     </div>
   );
 }
