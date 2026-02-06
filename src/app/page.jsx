@@ -7,8 +7,8 @@ export default function HomePage() {
   return (
     <div>
       <Hero></Hero>
-      <About></About>
       <Service></Service>
+      <About></About>
       <HowToWork></HowToWork>
     </div>
   );
