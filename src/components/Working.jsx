@@ -18,14 +18,14 @@ const Working = () => {
             <div className="md:w-1/2 space-y-8">
                 <div>
                     <h4 className="text-blue-500 italic font-medium mb-2">How We Work</h4>
-                    <h2 className="text-4xl md:text-5xl font-bold text-gray-900 leading-tight">
+                    <h2 className="text-xl md:text-2xl font-bold text-gray-900 leading-tight">
                         Professional Psychology Therapy You Can Choose
                     </h2>
                 </div>
 
-                <div className="space-y-6">
+                <div className="space-y-2">
 
-                    <div className="flex items-start gap-4 p-4 rounded-xl hover:bg-white hover:shadow-md transition-all duration-300">
+                    <div className="flex items-start gap-4 p-2 rounded-xl hover:bg-white hover:shadow-md transition-all duration-300">
                         <div className="bg-green-50 p-3 rounded-lg border border-green-100">
                             <PhoneCall className="text-green-600 w-6 h-6" />
                         </div>
@@ -37,7 +37,7 @@ const Working = () => {
                         </div>
                     </div>
 
-                    <div className="flex items-start gap-4 p-4 rounded-xl hover:bg-white hover:shadow-md transition-all duration-300">
+                    <div className="flex items-start gap-4 p-2 rounded-xl hover:bg-white hover:shadow-md transition-all duration-300">
                         <div className="bg-yellow-50 p-3 rounded-lg border border-yellow-100">
                             <CalendarCheck className="text-yellow-600 w-6 h-6" />
                         </div>
@@ -49,7 +49,7 @@ const Working = () => {
                         </div>
                     </div>
 
-                    <div className="flex items-start gap-4 p-4 rounded-xl hover:bg-white hover:shadow-md transition-all duration-300">
+                    <div className="flex items-start gap-4 p-2 rounded-xl hover:bg-white hover:shadow-md transition-all duration-300">
                         <div className="bg-blue-50 p-3 rounded-lg border border-blue-100">
                             <Users className="text-blue-600 w-6 h-6" />
                         </div>
