@@ -1,4 +1,5 @@
 import { services } from "@/utils/services";
+import Head from "next/head";
 import Link from "next/link";
 
 export default function ServiceDetails({ params }) {
