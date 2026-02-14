@@ -1,12 +1,11 @@
 "use client";
 
 import { useState, useContext } from "react";
-import { useParams } from "next/navigation";
+import { services } from "@/data/services";
 import { AuthContext } from "@/lib/AuthProvider";
-import { services } from "@/utils/services";
 
-export default function BookingContent() {
-  const params = useParams();
+export default function BookingContent({ params }) {
+
   const { user } = useContext(AuthContext);
 
   const service = services.find(s => s.id === params.id);
@@ -15,49 +14,43 @@ export default function BookingContent() {
 
   const total = duration * service.price;
 
-  const handleBooking = async () => {
-    const booking = {
+  const handlePayment = async () => {
+
+    // pending booking save (payment success হলে final save হবে)
+    localStorage.setItem("pendingBooking", JSON.stringify({
       service: service.name,
       duration,
       total,
-      status: "Pending"
-    };
+      status: "Confirmed"
+    }));
 
-    const existing = JSON.parse(localStorage.getItem("bookings")) || [];
-    localStorage.setItem("bookings", JSON.stringify([...existing, booking]));
-
-    // email invoice send
-    await fetch("/api/send-email", {
+    const res = await fetch("/api/checkout", {
       method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
+      headers: {"Content-Type":"application/json"},
       body: JSON.stringify({
-        email: user?.email,
         service: service.name,
-        duration,
         total
       }),
     });
 
-    alert("Booking Successful & Email Sent!");
+    const data = await res.json();
+    window.location.href = data.url;
   };
 
   return (
-    <div style={{ padding: 20 }}>
+    <div style={{padding:20}}>
       <h1>Book {service.name}</h1>
 
-      <label>Duration (hours)</label>
       <input
         type="number"
         value={duration}
-        onChange={(e) => setDuration(Number(e.target.value))}
+        onChange={(e)=>setDuration(Number(e.target.value))}
       />
 
       <p>Total Cost: {total} BDT</p>
 
-      <button onClick={handleBooking}>
-        Confirm Booking
+      <button onClick={handlePayment}>
+        Pay & Confirm Booking
       </button>
     </div>
   );
