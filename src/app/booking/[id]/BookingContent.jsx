@@ -16,7 +16,6 @@ export default function BookingContent({ params }) {
 
   const handlePayment = async () => {
 
-    // pending booking save (payment success হলে final save হবে)
     localStorage.setItem("pendingBooking", JSON.stringify({
       service: service.name,
       duration,
