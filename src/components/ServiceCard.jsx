@@ -13,7 +13,7 @@ export default function ServiceCard({ service }) {
       <p className="font-bold mt-2">৳ {service.price} / day</p>
 
       <Link
-        href={`/services/${service._id}`}
+        href={`/service/${service._id}`}
         className="inline-block mt-3 bg-black text-white px-4 py-2 rounded"
       >
         View Details

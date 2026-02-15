@@ -3,6 +3,11 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import AuthProvider from "@/lib/AuthProvider";
 
+export const metadata = {
+  title: "Care.xyz",
+  description: "Baby & Elderly Care Platform",
+};
+
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
