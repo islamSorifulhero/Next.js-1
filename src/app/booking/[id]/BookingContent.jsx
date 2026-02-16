@@ -1,8 +1,9 @@
 "use client";
 
 import { useState, useContext } from "react";
-import { services } from "@/data/services";
+// import { services } from "@/data/services";
 import { AuthContext } from "@/lib/AuthProvider";
+import { services } from "@/components/data/services";
 
 export default function BookingContent({ params }) {
 
