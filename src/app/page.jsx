@@ -9,7 +9,7 @@ import Link from "next/link";
 export default function HomePage() {
   return (
     <div>
-      <div style={{ padding: 20 }}>
+      {/* <div style={{ padding: 20 }}>
         <h1>Welcome to Care.xyz</h1>
         <h2>Our Services</h2>
         {services.map(service => (
@@ -21,7 +21,7 @@ export default function HomePage() {
             </Link>
           </div>
         ))}
-      </div>
+      </div> */}
       <Hero></Hero>
       <Service></Service>
       <About></About>
