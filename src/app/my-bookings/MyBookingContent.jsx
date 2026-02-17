@@ -7,7 +7,6 @@ export default function MyBookingContent() {
 
   useEffect(()=>{
 
-    // payment success হলে pending booking final booking এ add
     const pending = JSON.parse(localStorage.getItem("pendingBooking"));
 
     if(pending){
