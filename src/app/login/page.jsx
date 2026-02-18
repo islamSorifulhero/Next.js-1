@@ -20,7 +20,6 @@ export default function LoginPage() {
 
       const res = await signInWithEmailAndPassword(auth, email, password);
 
-      // Save Firebase token in cookie
       const token = await res.user.getIdToken();
       document.cookie = `token=${token}; path=/`;
 
