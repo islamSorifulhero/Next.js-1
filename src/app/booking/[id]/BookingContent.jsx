@@ -7,11 +7,8 @@ import { services } from "@/components/data/services";
 export default function BookingContent({ params }) {
 
   const { user } = useContext(AuthContext);
-
   const service = services.find(s => s.id === params.id);
-
   const [duration, setDuration] = useState(1);
-
   const total = duration * service.price;
 
   const handlePayment = async () => {
@@ -45,9 +42,7 @@ export default function BookingContent({ params }) {
         value={duration}
         onChange={(e)=>setDuration(Number(e.target.value))}
       />
-
       <p>Total Cost: {total} BDT</p>
-
       <button onClick={handlePayment}>
         Pay & Confirm Booking
       </button>
