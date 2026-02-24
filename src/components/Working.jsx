@@ -8,9 +8,9 @@ const Working = () => {
             <div className="md:w-1/2 relative">
                 <div className="rounded-3xl overflow-hidden shadow-2xl border-white border-[10px]">
                     <img
-                        src="/bed.jpg"
+                        src="shkrabaanthony.jpg"
                         alt="Professional Psychology Therapy"
-                        className="w-full h-auto object-cover"
+                        className="w-full h-[600px] object-cove"
                     />
                 </div>
             </div>
