@@ -11,15 +11,13 @@ const Hero = () => {
     ];
 
     return (
-        <section className="relative overflow-hidden bg-slate-50 py-20 lg:py-28">
-            {/* Background Decorative Circles */}
+        <section className="relative overflow-hidden bg-slate-50 py-20 lg:py-4">
             <div className="absolute top-[-10%] left-[-5%] w-72 h-72 bg-blue-100 rounded-full blur-3xl opacity-50" />
             <div className="absolute bottom-[-10%] right-[-5%] w-96 h-96 bg-emerald-100 rounded-full blur-3xl opacity-50" />
 
             <div className="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center relative z-10">
-                
-                {/* Left Content */}
-                <motion.div 
+
+                <motion.div
                     initial={{ opacity: 0, x: -50 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.6 }}
@@ -40,7 +38,7 @@ const Hero = () => {
 
                     <div className="grid gap-4">
                         {services.map((service, index) => (
-                            <motion.div 
+                            <motion.div
                                 key={service.id}
                                 initial={{ opacity: 0, y: 20 }}
                                 animate={{ opacity: 1, y: 0 }}
@@ -62,8 +60,7 @@ const Hero = () => {
                     </div>
                 </motion.div>
 
-                {/* Right Content - Image with Creative Elements */}
-                <motion.div 
+                <motion.div
                     initial={{ opacity: 0, scale: 0.8 }}
                     animate={{ opacity: 1, scale: 1 }}
                     transition={{ duration: 0.8 }}
@@ -77,8 +74,7 @@ const Hero = () => {
                         />
                     </div>
 
-                    {/* Floating Info Badge */}
-                    <motion.div 
+                    <motion.div
                         animate={{ y: [0, -15, 0] }}
                         transition={{ repeat: Infinity, duration: 4, ease: "easeInOut" }}
                         className="absolute -bottom-6 -left-6 z-20 bg-white p-5 rounded-2xl shadow-2xl border border-gray-100 flex items-center gap-4"
@@ -92,7 +88,6 @@ const Hero = () => {
                         </div>
                     </motion.div>
 
-                    {/* Decorative Elements */}
                     <div className="absolute -top-8 -right-8 w-32 h-32 bg-blue-500/10 rounded-full -z-0 blur-xl"></div>
                 </motion.div>
             </div>
