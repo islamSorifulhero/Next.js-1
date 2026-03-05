@@ -6,10 +6,10 @@ const HowToWork = () => {
             <div className="container mx-auto px-6">
                 {/* Section Header */}
                 <div className="text-center mb-12">
-                    <h2 className="text-3xl md:text-4xl font-bold text-base-content">
-                        Frequently Asked Questions
+                    <h2 className="text-4xl md:text-5xl font-bold mb-4">
+                        <span className='bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent'>Frequently Asked Questions</span>
                     </h2>
-                    <p className="mt-3 text-base-content/70 max-w-2xl mx-auto">
+                    <p className="text-xl text-gray-600 max-w-3xl mx-auto">
                         Find quick answers to common questions about orders, delivery,
                         payments, and returns.
                     </p>
