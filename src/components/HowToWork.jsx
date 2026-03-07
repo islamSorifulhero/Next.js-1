@@ -4,7 +4,6 @@ const HowToWork = () => {
     return (
         <section className="py-16 bg-base-100">
             <div className="container mx-auto px-6">
-                {/* Section Header */}
                 <div className="text-center mb-12">
                     <h2 className="text-4xl md:text-5xl font-bold mb-4">
                         <span className='bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent'>Frequently Asked Questions</span>
@@ -14,10 +13,7 @@ const HowToWork = () => {
                         payments, and returns.
                     </p>
                 </div>
-
-                {/* FAQ Items */}
                 <div className="space-y-4">
-                    {/* FAQ 1 */}
                     <div className="collapse collapse-arrow bg-base-200">
                         <input type="radio" name="faq-accordion" defaultChecked />
                         <div className="collapse-title text-lg font-semibold">
@@ -30,8 +26,6 @@ const HowToWork = () => {
                             </p>
                         </div>
                     </div>
-
-                    {/* FAQ 2 */}
                     <div className="collapse collapse-arrow bg-base-200">
                         <input type="radio" name="faq-accordion" />
                         <div className="collapse-title text-lg font-semibold">
@@ -44,8 +38,6 @@ const HowToWork = () => {
                             </p>
                         </div>
                     </div>
-
-                    {/* FAQ 3 */}
                     <div className="collapse collapse-arrow bg-base-200">
                         <input type="radio" name="faq-accordion" />
                         <div className="collapse-title text-lg font-semibold">
@@ -58,8 +50,6 @@ const HowToWork = () => {
                             </p>
                         </div>
                     </div>
-
-                    {/* FAQ 4 */}
                     <div className="collapse collapse-arrow bg-base-200">
                         <input type="radio" name="faq-accordion" />
                         <div className="collapse-title text-lg font-semibold">
@@ -73,8 +63,6 @@ const HowToWork = () => {
                             </p>
                         </div>
                     </div>
-
-                    {/* FAQ 5 */}
                     <div className="collapse collapse-arrow bg-base-200">
                         <input type="radio" name="faq-accordion" />
                         <div className="collapse-title text-lg font-semibold">
